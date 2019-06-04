@@ -6,16 +6,13 @@ public class Tester {
 		System.out.println("Hello World!");
 		Breakfast breakfast = new Breakfast();
 		breakfast.start();
-		try {
-			breakfast.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		
 		BrushTeeth bt = new BrushTeeth();
 		Thread thread = new Thread(bt);
 		thread.start();
 		try {
 			thread.join();
+			breakfast.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
