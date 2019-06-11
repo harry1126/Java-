@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class Wizard extends Thread {
 	
-	public static synchronized void thunder() {
+	static synchronized public void thunder() {
 		System.out.println("THUNDER START!!");
 		try {
 			Thread.sleep(2000);
